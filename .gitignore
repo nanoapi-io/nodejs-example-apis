@@ -1,0 +1,9 @@
+node_modules
+dist
+out
+
+# Only an example repo, no need to lock the dependencies
+package-lock.json
+
+# This file would typically be committed in a real project
+.napirc
