@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import * as wizardsService from "./wizards.service";
+import * as wizardsService from "../services/wizards.service";
 
 const router = Router();
 

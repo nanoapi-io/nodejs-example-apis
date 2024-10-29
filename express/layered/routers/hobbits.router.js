@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import * as hobbitsService from "./hobbits.service";
+import * as hobbitsService from "../services/hobbits.service";
 
 const router = Router();
 

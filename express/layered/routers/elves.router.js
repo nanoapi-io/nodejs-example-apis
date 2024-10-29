@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import * as elvesService from "./elves.service";
+import * as elvesService from "../services/elves.service";
 
 const router = Router();
 
