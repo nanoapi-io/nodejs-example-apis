@@ -1,16 +1,16 @@
-const { Router } = require("express");
+const { Router } = import("express");
 
-const { findAll, findById, create } = require("../services/wizards.service");
+const { findAll, findById, create } = import("../services/wizards.service");
 
 const router = Router();
 
-// @nanoapi method:GET path:/api/v1/wizards group:wizards
+// @nanoapi method:GET path:/api/v1/wizards group:wizards2
 router.get("/", async (req, res) => {
   const wizards = await findAll();
   res.send(wizards);
 });
 
-// @nanoapi method:GET path:/api/v1/wizards/:id group:wizards
+// @nanoapi method:GET path:/api/v1/wizards/:id group:wizards1
 router.get("/:id", async (req, res) => {
   const wizard = await findById(req.params.id);
   res.send(wizard);

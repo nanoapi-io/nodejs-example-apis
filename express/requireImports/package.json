@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-example-apis",
+  "version": "1.0.0",
+  "description": "Collection of NodeJS apis for use with NanoAPI's napi cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joel Milligan <joel@nanoapi.io> (https://nanoapi.io)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
+
