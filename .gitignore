@@ -1,6 +1,7 @@
 node_modules
 dist
 out
+napi_dist
 
 # Only an example repo, no need to lock the dependencies
 package-lock.json
