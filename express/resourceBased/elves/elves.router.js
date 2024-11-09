@@ -1,22 +1,22 @@
-const { Router } = import("express");
+import { Router } from "express";
 
-const elvesService = import("../services/elves.service");
+import * as elvesService from "./elves.service";
 
 const router = Router();
 
-// @nanoapi method:GET path:/api/v0/elves group:elves
+// @nanoapi path:/api/v0/elves/ method:GET
 router.get("/", async (req, res) => {
   const elves = await elvesService.findAll();
   res.send(elves);
 });
 
-// @nanoapi method:GET path:/api/v0/elves/:id group:elves
+// @nanoapi path:/api/v0/elves/:id method:GET
 router.get("/:id", async (req, res) => {
   const elf = await elvesService.findById(req.params.id);
   res.send(elf);
 });
 
-// @nanoapi method:POST path:/api/v0/elves group:elves
+// @nanoapi path:/api/v0/elves/ method:POST
 router.post("/", async (req, res) => {
   const elf = req.body;
   const newElf = await elvesService.create(elf);

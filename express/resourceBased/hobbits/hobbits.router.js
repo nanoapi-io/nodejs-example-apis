@@ -1,22 +1,22 @@
-const { Router } = require("express");
+import { Router } from "express";
 
-const hobbitsService = require("../services/hobbits.service");
+import * as hobbitsService from "./hobbits.service";
 
 const router = Router();
 
-// @nanoapi method:GET path:/api/v2/hobbits group:hobbits
+// @nanoapi path:/api/v0/hobbits/ method:GET
 router.get("/", async (req, res) => {
   const hobbits = await hobbitsService.findAll();
   res.send(hobbits);
 });
 
-// @nanoapi method:GET path:/api/v2/hobbits/:id group:hobbits
+// @nanoapi path:/api/v0/hobbits/:id method:GET
 router.get("/:id", async (req, res) => {
   const hobbit = await hobbitsService.findById(req.params.id);
   res.send(hobbit);
 });
 
-// @nanoapi method:POST path:/api/v2/hobbits group:hobbits
+// @nanoapi path:/api/v0/hobbits/ method:POST
 router.post("/", async (req, res) => {
   const hobbit = req.body;
   const newHobbit = await hobbitsService.create(hobbit);
